@@ -8,6 +8,11 @@ export default class CategoriaSeeder extends BaseSeeder {
       { nombre: 'Sombras' },
       { nombre: 'Bases' },
       { nombre: 'Delineadores' },
+      { nombre: 'Máscaras' },
+      { nombre: 'Rubores' },
+      { nombre: 'Correctores' },
+      { nombre: 'Polvos' },
+      { nombre: 'Iluminadores' },
     ])
   }
 }

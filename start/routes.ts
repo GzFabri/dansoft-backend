@@ -10,6 +10,7 @@
 import router from '@adonisjs/core/services/router'
 const ProductosController = () => import('#controllers/productos_controller')
 const CategoriasController = () => import('#controllers/categorias_controller')
+const VentasController = () => import('#controllers/ventas_controller')
 
 // Listar todos los productos
 router.get('/productos', [ProductosController, 'index'])
@@ -41,4 +42,9 @@ router.put('/categorias/:id', [CategoriasController, 'update'])
 // Eliminar una categoría por ID
 router.delete('/categorias/:id', [CategoriasController, 'destroy'])
 
-// Comprar un producto
+// --- Rutas para ventas ---
+router.get('/ventas', [VentasController, 'index']) // Listar todas las ventas
+router.post('/ventas', [VentasController, 'store']) // Crear una venta
+router.get('/ventas/:id', [VentasController, 'show']) // Ver una venta por ID
+router.put('/ventas/:id', [VentasController, 'update']) // Actualizar una venta por ID
+router.delete('/ventas/:id', [VentasController, 'destroy']) // Eliminar una venta

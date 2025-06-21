@@ -10,6 +10,9 @@ export default class Categoria extends BaseModel {
   @column()
   declare nombre: string
 
+  @column()
+  declare descripcion: string
+
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 
